@@ -14,7 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
+gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -26,6 +26,19 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+# React on Rails integrates Rails with (server rendering of) Facebook's React front-end framework.
+# Read more: https://shakacode.gitbooks.io/react-on-rails/content/
+# Read more: https://www.shakacode.com/
+gem 'react_on_rails', '11.2.1'
+
+# The MongoDB Ruby driver is the officially supported Ruby driver for MongoDB
+# Read more: https://docs.mongodb.com/ruby-driver/current/
+gem 'mongoid', '~> 6.4', '>= 6.4.2'
+gem 'bson_ext'
+
+# Read more: https://getbootstrap.com/
+gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
