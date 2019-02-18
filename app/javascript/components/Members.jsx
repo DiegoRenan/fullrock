@@ -9,7 +9,10 @@ export default class Members extends React.Component {
 
   render() {
     return (
-        <h1>Index</h1>
+        <div>
+            <h1>Index</h1>
+            <button type="button" className="btn btn-success">Success</button>
+        </div>
     );
   }
 }
