@@ -5,20 +5,20 @@ export default props => (
 
        <div className="search-bar row">
             <Grid cols="12 6 6">
-                <div class="col">
-                    <input class="form-control form-control input search" 
+                <div className="col">
+                    <input className="form-control form-control input search" 
                         type="search" 
                         placeholder="Search" />                        
                 </div>
             </Grid>
             <Grid cols="12 4 4">
                 Visualizar:
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-light active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked/> FRELLAS
+                <div className="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label className="btn btn-light active">
+                        <input type="radio" name="options" id="option1" autoComplete="off" defaultChecked/> FRELLAS
                     </label>
-                    <label class="btn btn-light">
-                        <input type="radio" name="options" id="option2" autocomplete="off"/> USUÁRIOS
+                    <label className="btn btn-light">
+                        <input type="radio" name="options" id="option2" autoComplete="off"/> USUÁRIOS
                     </label>
                 </div>
             </Grid>

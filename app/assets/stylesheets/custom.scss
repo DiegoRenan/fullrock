@@ -4,6 +4,12 @@ body{
     color: #607D8B;
 }
 
+.main{
+    background-color: #F2F2F2;
+    .tab-content{
+        min-height: 100vh;
+    }
+}
 .content{
     display: flex;
     width: 100%;

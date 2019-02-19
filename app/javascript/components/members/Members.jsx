@@ -64,9 +64,8 @@ export default class Members extends React.Component {
 
   render() {
     return (
-        <div className="container-fluid content">
+        <div className="">
           <Grid cols= "12 12 12">
-              <h1>Index</h1>
               <Search />
               <MemberList list={this.state.list}/>
 
