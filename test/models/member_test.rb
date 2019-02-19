@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MemberTest < ActiveSupport::TestCase
   def setup
-    @member = Member.new(name: "member de test", email: "member@email.com")
+    @member = Member.new(name: "member de test", email: "member@email.com", role: "employee")
   end
 
   test "should be valid" do
@@ -19,6 +19,11 @@ class MemberTest < ActiveSupport::TestCase
     assert_not @member.valid?
   end
 
+  test "role should be present" do
+    @member.role = "     "
+    assert_not @member.valid?
+  end
+
   test "name should not be too long" do
     @member.name = "a" * 201
     assert_not @member.valid?
@@ -26,6 +31,11 @@ class MemberTest < ActiveSupport::TestCase
 
   test "email should not be too long" do
     @member.email = "a" * 201 + "@example.com"
+    assert_not @member.valid?
+  end
+
+  test "role should not be too long" do
+    @member.email = "a" * 21
     assert_not @member.valid?
   end
 
