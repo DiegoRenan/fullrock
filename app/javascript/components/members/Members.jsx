@@ -3,11 +3,12 @@ import axios from 'axios'
 
 import Grid from '../templates/grid'
 import MemberForm from '../members/MemberForm'
+import MemberList from '../members/MemberList'
 
 const URL = '/members'
 
 export default class Members extends React.Component {
-
+  
   constructor(props) {
     super(props);
     
@@ -16,9 +17,18 @@ export default class Members extends React.Component {
     this.handleChangeName = this.handleChangeName.bind(this)
     this.handleChangeEmail = this.handleChangeEmail.bind(this)
     this.handleChangeRole = this.handleChangeRole.bind(this)
-    
+
     this.handleAdd = this.handleAdd.bind(this)
     
+    this.getMembers()
+  }
+
+  getMembers(){
+    axios.get(`${URL}.json`,{ headers: { 'Content-Type': 'application/json'}})
+        .then((resp) =>{
+            this.setState({...this.state, list: resp.data})
+            console.log(resp.data)
+        })                                                                  
   }
 
   handleChangeName(e){
@@ -41,11 +51,12 @@ export default class Members extends React.Component {
         role: this.state.role
     }
 
-    axios.post(URL, member,{ headers: { 'Content-Type': 'application/json'}})
-      .then(resp =>  { 
-            this.setState({ ...this.state, response: resp.data})  
-            console.log(resp.data)
-        } 
+    axios.post(URL, member, { headers: { 'Content-Type': 'application/json'}})
+      .then(
+          resp =>  {
+            this.setState({ ...this.state, response: resp.data}) 
+            this.getMembers()
+        }
       );
   }
 
@@ -60,6 +71,9 @@ export default class Members extends React.Component {
                       data-target="#nav-member" 
                       aria-expanded="false" 
                       aria-controls="nav-member">NEW MEMBER</button>
+              
+              <MemberList list={this.state.list}/>
+
           </Grid>
           <MemberForm handleChangeName={this.handleChangeName}
                       handleChangeEmail={this.handleChangeEmail}

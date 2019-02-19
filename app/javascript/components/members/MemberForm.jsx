@@ -17,7 +17,7 @@ export default props => {
         }
     }
     return(
-        <div className="nav flex-column sidebar" id="nav-member">
+        <div className="nav flex-column collapse sidebar" id="nav-member">
             <Grid cols= "12 12 12">
             
                 <div className="left-sidebar">

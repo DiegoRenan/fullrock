@@ -2,8 +2,12 @@ class MembersController < ApplicationController
     skip_before_action :verify_authenticity_token
     
     def index
-        @members = Member.all
-        @member = Member.new
+        @members = Member.all.order("created_at DESC")
+        respond_to do |format|
+            format.html # index.html.erb
+            format.xml  { render xml: @members }
+            format.json { render json: @members }
+        end
     end
 
     def create
