@@ -2,7 +2,7 @@ import React from 'react'
 
 export default props => (
   <nav className="navbar navbar-light bg-default">
-    <a className="navbar-brand" href="#">Navbar</a>
+    <a className="navbar-brand" href="#">Setup</a>
     <li className="nav-item dropdown">
         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
                                                                              data-toggle="dropdown" 

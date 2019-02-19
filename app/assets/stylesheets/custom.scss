@@ -8,6 +8,29 @@ a {
     color: #607D8B;
 }
 
+.panel{
+    float: left;
+    z-index: 1;
+    
+    .box-panel{
+        position: relative;
+        width: 80px;
+        min-height: 5rem;
+        margin-top: 1rem;
+        padding: 1px;
+        background-color: #D8D8D8;
+        border-radius: 100%;
+    }
+
+    .principal{
+        width: 90px;
+        min-height: 6rem;
+    }
+}
+
+
+
+
 .main{
     background-color: #D8D8D8;
     .bg-default{
