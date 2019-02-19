@@ -1,12 +1,15 @@
 import React from 'react';
 
 import Members from '../members/Members'
-import Grid from '../templates/grid'
+import Header from '../templates/header'
 export default class Main extends React.Component {
 
     render() {
         return (
+            <div>
+            
             <div className="container-fluid main">
+            <Header />    
                 <nav>
                     <div className="nav nav-tabs" id="nav-tab" role="tablist">
                         <a className="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" 
@@ -45,6 +48,7 @@ export default class Main extends React.Component {
                     </div>
                     
                 </div>
+            </div>
             </div>
         );
       }

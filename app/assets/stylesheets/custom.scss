@@ -4,10 +4,19 @@ body{
     color: #607D8B;
 }
 
+a {
+    color: #607D8B;
+}
+
 .main{
-    background-color: #F2F2F2;
+    background-color: #D8D8D8;
+    .bg-default{
+        background-color: #D8D8D8;
+    }
     .tab-content{
         min-height: 100vh;
+        background-color: #F2F2F2;
+        padding-top: 2rem;
     }
 }
 .content{
